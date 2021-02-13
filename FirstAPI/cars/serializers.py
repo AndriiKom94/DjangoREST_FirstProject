@@ -7,7 +7,10 @@ class CarListSerializer(serializers.ModelSerializer):
         model = Car
         fields = ('id', 'vin', 'user')
 
+
 class CarDetailSerializer(serializers.ModelSerializer):
+    user = serializers.HiddenField(default=serializers.CurrentUserDefault())
+
     class Meta:
         model = Car
         fields = '__all__'
