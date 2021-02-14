@@ -1,10 +1,8 @@
-from django.shortcuts import render
 from rest_framework import generics
 from cars.serializers import CarDetailSerializer, CarListSerializer
 from cars.models import Car
 from cars.permission import IsOwnerOrReadOnly
 from rest_framework.permissions import IsAuthenticated
-from rest_framework.authentication import TokenAuthentication
 
 
 class CarCreateView(generics.CreateAPIView):
