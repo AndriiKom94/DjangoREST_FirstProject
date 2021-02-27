@@ -8,8 +8,6 @@ class CarListSerializer(serializers.ModelSerializer):
         fields = ('id', 'vin', 'user')
         
         
-
-
 class CarDetailSerializer(serializers.ModelSerializer):
     user = serializers.HiddenField(default=serializers.CurrentUserDefault())
 
