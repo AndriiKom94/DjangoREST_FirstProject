@@ -12,7 +12,6 @@ class Car(models.Model):
         (1, 'Седан'),
         (2, 'Хетчбек'),
         (3, 'Універсал'),
-        (4, 'Купе'),
     )
     car_type = models.IntegerField(verbose_name='Car_Type', choices=CAR_TYPES)
     user = models.ForeignKey(User, verbose_name='Користувач', on_delete=models.CASCADE)
